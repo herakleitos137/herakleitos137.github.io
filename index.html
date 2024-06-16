@@ -3,54 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>welcome to hērάkleitos' homepage</title>
+    <title>Contact Form</title>
+    <script src="https://hcaptcha.com/1/api.js" async defer></script>
     <style>
-        body {
-            background-color: #000; /* Black background */
-            color: #fff; /* White text */
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            color: #4CAF50;
-            font-size: 2em; /* Larger text */
-            text-transform: lowercase; /* Lowercase text */
-        }
-        p {
-            font-size: 1.2em; /* Larger text */
-            text-transform: lowercase; /* Lowercase text */
-            color: #fff; /* White text */
-        }
-        a {
-            color: #1DA1F2; /* Blue color for links */
-            text-decoration: none;
-            font-size: 1.2em; /* Larger text */
-            text-transform: lowercase; /* Lowercase text */
-        }
-        a:hover {
-            color: #4CAF50; /* Green color on hover */
-            text-decoration: underline;
-        }
-        .github-logo {
-            width: 32px; /* Ensure the logo is an appropriate size */
-            vertical-align: middle;
-            margin-right: 10px;
-        }
-        .banner-image {
-            width: 100%;
-            height: auto; /* Ensure the banner image scales correctly */
-            max-width: 600px; /* Set a maximum width for the banner */
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
 <body>
+    <h1>Contact Us</h1>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-    <img src="https://github.com/herakleitos137/herakleitos137/raw/herakleitos137/smolbanner.PNG" alt="banner image" class="banner-image">
-    
-    <h1>welcome to hērάkleitos' homepage</h1>
-    <p>follow me on <span style="font-family: 'Courier New', Courier, monospace;">𝕏</span>: <a href="https://x.com/herakleitos137">@herakleitos137</a></p>
-    <p><img src="https://github.com/herakleitos137/herakleitos137/raw/herakleitos137/github-mark-white.png" alt="github logo" class="github-logo"><span>view my github profile: </span><a href="https://github.com/herakleitos137">@herakleitos137</a></p>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="_replyto" required>
 
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <div class="h-captcha" data-sitekey="your-hcaptcha-site-key"></div>
+
+        <button type="submit">Send</button>
+    </form>
+
+    <div class="center" style="margin-top: 20px;">
+        <img src="https://raw.githubusercontent.com/herakleitos137/herakleitos137.github.io/herakleitos137/construction.gif" alt="Under Construction">
+    </div>
 </body>
 </html>
