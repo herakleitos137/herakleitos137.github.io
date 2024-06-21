@@ -6,11 +6,11 @@
     <title>welcome to hērάkleitos' homepage</title>
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
+            background-color: #000; /* Black background */
             color: #fff; /* White text */
+            font-family: Arial, sans-serif;
             text-align: center;
+            padding: 50px;
             position: relative;
             z-index: 1;
         }
@@ -22,11 +22,6 @@
             min-height: 100%;
             z-index: -1;
             object-fit: cover;
-        }
-        .content {
-            position: relative;
-            z-index: 2;
-            padding: 50px;
         }
         h1 {
             color: #4CAF50;
@@ -59,6 +54,23 @@
             max-width: 600px; /* Set a maximum width for the banner */
         }
     </style>
+    <script>
+        function setVideoSource() {
+            const video = document.querySelector('video');
+            const screenWidth = window.screen.width;
+            let videoSrc = 'path_to_your_starfield_video_2k.mp4'; // Default 2K video
+
+            if (screenWidth >= 3840) { // 4K screens
+                videoSrc = 'path_to_your_starfield_video_4k.mp4';
+            } else if (screenWidth < 1920) { // Lower resolution screens
+                videoSrc = 'path_to_your_starfield_video_1080.mp4';
+            }
+
+            video.src = videoSrc;
+        }
+
+        document.addEventListener('DOMContentLoaded', setVideoSource);
+    </script>
 </head>
 <body>
 
@@ -67,13 +79,11 @@
         Your browser does not support the video tag.
     </video>
 
-    <div class="content">
-        <img src="https://github.com/herakleitos137/herakleitos137/raw/herakleitos137/smolbanner.PNG" alt="banner image" class="banner-image">
-        
-        <h1>welcome to hērάkleitos' homepage</h1>
-        <p>follow me on <span style="font-family: 'Courier New', Courier, monospace;">𝕏</span>: <a href="https://x.com/herakleitos137">@herakleitos137</a></p>
-        <p><img src="https://github.com/herakleitos137/herakleitos137/raw/herakleitos137/github-mark-white.png" alt="github logo" class="github-logo"><span>view my github profile: </span><a href="https://github.com/herakleitos137">@herakleitos137</a></p>
-    </div>
+    <img src="https://github.com/herakleitos137/herakleitos137/raw/herakleitos137/smolbanner.PNG" alt="banner image" class="banner-image">
+    
+    <h1>welcome to hērάkleitos' homepage</h1>
+    <p>follow me on <span style="font-family: 'Courier New', Courier, monospace;">𝕏</span>: <a href="https://x.com/herakleitos137">@herakleitos137</a></p>
+    <p><img src="https://github.com/herakleitos137/herakleitos137/raw/herakleitos137/github-mark-white.png" alt="github logo" class="github-logo"><span>view my github profile: </span><a href="https://github.com/herakleitos137">@herakleitos137</a></p>
 
 </body>
 </html>
