@@ -59,23 +59,6 @@
             max-width: 600px; /* Set a maximum width for the banner */
         }
     </style>
-    <script>
-        function setVideoSource() {
-            const video = document.querySelector('video');
-            const screenWidth = window.screen.width;
-            let videoSrc = 'path_to_your_starfield_video_2k.mp4'; // Default 2K video
-
-            if (screenWidth >= 3840) { // 4K screens
-                videoSrc = 'path_to_your_starfield_video_4k.mp4';
-            } else if (screenWidth < 1920) { // Lower resolution screens
-                videoSrc = 'path_to_your_starfield_video_1080.mp4';
-            }
-
-            video.src = videoSrc;
-        }
-
-        document.addEventListener('DOMContentLoaded', setVideoSource);
-    </script>
 </head>
 <body>
 
