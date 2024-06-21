@@ -48,11 +48,6 @@
             vertical-align: middle;
             margin-right: 10px;
         }
-        .banner-image {
-            width: 100%;
-            height: auto; /* Ensure the banner image scales correctly */
-            max-width: 600px; /* Set a maximum width for the banner */
-        }
     </style>
     <script>
         function setVideoSource() {
@@ -60,7 +55,7 @@
             const screenWidth = window.screen.width;
             let videoSrc = 'https://github.com/herakleitos137/herakleitos137.github.io/raw/herakleitos137/starfield2k.mp4'; // Default 2K video
 
-            if (screenWidth >= 2840) { // 4K screens
+            if (screenWidth >= 3840) { // 4K screens
                 videoSrc = 'https://github.com/herakleitos137/herakleitos137.github.io/raw/herakleitos137/starfield4k.mp4';
             } else if (screenWidth < 1920) { // Lower resolution screens
                 videoSrc = 'https://github.com/herakleitos137/herakleitos137.github.io/raw/herakleitos137/starfield1k.mp4';
@@ -79,8 +74,6 @@
         Your browser does not support the video tag.
     </video>
 
-    <img src="https://github.com/herakleitos137/herakleitos137/raw/herakleitos137/smolbanner.PNG" alt="banner image" class="banner-image">
-    
     <h1>welcome to hērάkleitos' homepage</h1>
     <p>follow me on <span style="font-family: 'Courier New', Courier, monospace;">𝕏</span>: <a href="https://x.com/herakleitos137">@herakleitos137</a></p>
     <p><img src="https://github.com/herakleitos137/herakleitos137/raw/herakleitos137/github-mark-white.png" alt="github logo" class="github-logo"><span>view my github profile: </span><a href="https://github.com/herakleitos137">@herakleitos137</a></p>
