@@ -58,12 +58,12 @@
         function setVideoSource() {
             const video = document.querySelector('video');
             const screenWidth = window.screen.width;
-            let videoSrc = 'path_to_your_starfield_video_2k.mp4'; // Default 2K video
+            let videoSrc = 'https://github.com/herakleitos137/herakleitos137.github.io/raw/herakleitos137/starfield2k.mp4'; // Default 2K video
 
             if (screenWidth >= 3840) { // 4K screens
-                videoSrc = 'path_to_your_starfield_video_4k.mp4';
+                videoSrc = 'https://github.com/herakleitos137/herakleitos137.github.io/raw/herakleitos137/starfield4k.mp4';
             } else if (screenWidth < 1920) { // Lower resolution screens
-                videoSrc = 'path_to_your_starfield_video_1080.mp4';
+                videoSrc = 'https://github.com/herakleitos137/herakleitos137.github.io/raw/herakleitos137/starfield1k.mp4';
             }
 
             video.src = videoSrc;
@@ -75,7 +75,7 @@
 <body>
 
     <video autoplay muted loop>
-        <source src="path_to_your_starfield_video_2k.mp4" type="video/mp4">
+        <source src="https://github.com/herakleitos137/herakleitos137.github.io/raw/herakleitos137/starfield2k.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
