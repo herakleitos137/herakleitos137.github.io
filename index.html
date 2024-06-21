@@ -74,12 +74,12 @@
         function setVideoSource() {
             const video = document.querySelector('video');
             const screenWidth = window.screen.width;
-            let videoSrc = 'https://github.com/herakleitos137/herakleitos137/raw/herakleitos137/starfield1k.mp4'; // Default 2K video
+            let videoSrc = 'https://github.com/herakleitos137/herakleitos137.github.io/raw/herakleitos137/starfield1k.mp4'; // Default 2K video
 
             if (screenWidth >= 3840) { // 4K screens
-                videoSrc = 'https://github.com/herakleitos137/herakleitos137/raw/herakleitos137/starfield1k.mp4';
+                videoSrc = 'https://github.com/herakleitos137/herakleitos137.github.io/raw/herakleitos137/starfield1k.mp4';
             } else if (screenWidth < 1920) { // Lower resolution screens
-                videoSrc = 'https://github.com/herakleitos137/herakleitos137/raw/herakleitos137/starfield1k.mp4';
+                videoSrc = 'https://github.com/herakleitos137/herakleitos137.github.io/raw/herakleitos137/starfield1k.mp4';
             }
 
             video.src = videoSrc;
