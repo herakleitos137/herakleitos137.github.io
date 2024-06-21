@@ -11,6 +11,27 @@
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 50px;
+            position: relative;
+            z-index: 1;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Optional: Add a dark overlay */
+            z-index: -1;
+        }
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -2;
+            object-fit: cover;
         }
         h1 {
             color: #4CAF50;
@@ -49,8 +70,30 @@
             max-width: 100%;
         }
     </style>
+    <script>
+        function setVideoSource() {
+            const video = document.querySelector('video');
+            const screenWidth = window.screen.width;
+            let videoSrc = 'https://github.com/herakleitos137/herakleitos137/raw/herakleitos137/starfield1k.mp4'; // Default 2K video
+
+            if (screenWidth >= 3840) { // 4K screens
+                videoSrc = 'https://github.com/herakleitos137/herakleitos137/raw/herakleitos137/starfield1k.mp4';
+            } else if (screenWidth < 1920) { // Lower resolution screens
+                videoSrc = 'https://github.com/herakleitos137/herakleitos137/raw/herakleitos137/starfield1k.mp4';
+            }
+
+            video.src = videoSrc;
+        }
+
+        document.addEventListener('DOMContentLoaded', setVideoSource);
+    </script>
 </head>
 <body>
+
+    <video autoplay muted loop>
+        <source src="path_to_your_starfield_video_2k.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
     <img src="https://github.com/herakleitos137/herakleitos137/raw/herakleitos137/smolbanner.PNG" alt="banner image" class="banner-image">
     
